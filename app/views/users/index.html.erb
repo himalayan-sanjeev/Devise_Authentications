@@ -1,0 +1,20 @@
+<th>
+<td> Email </td>
+<td> Current Sign in at </td>
+<td> Current Sign in IP </td>
+<td> Sign In count </td>
+</th>
+<hr>
+
+<% @users.each do |a| %>
+<tr>
+
+   <td><%= a.email %></td>
+   <td> <%= a.current_sign_in_at %></td>
+    <td> <%= a.last_sign_in_at %></td>
+   <td> <%= a.current_sign_in_ip  %></td>
+   <td> <%= a.last_sign_in_ip  %></td>
+    <td><%= a.sign_in_count  %></td>
+   </tr>
+<br>
+<% end %>
